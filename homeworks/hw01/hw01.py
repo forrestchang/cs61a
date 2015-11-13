@@ -9,10 +9,10 @@ def a_plus_abs_b(a, b):
     5
     """
     if b < 0:
-        f = a + (-b)
+        f = sub
     else:
-        f = a + b
-    return f
+        f = add
+    return f(a, b)
 
 
 def two_of_three(a, b, c):
@@ -37,6 +37,9 @@ def two_of_three(a, b, c):
 
     return sum_squares(a, b, c) - square(min(a, b, c))
 
+def two_of_three_answer(a, b, c):
+    return (a*a + b*b, a*a + c*c, b*b + c*c)
+
 
 def largest_factor(n):
     """Return the largest factor of n*n-1 that is smaller than n.
@@ -51,6 +54,9 @@ def largest_factor(n):
     for result in reversed(range(2, n)):
         if number % result == 0:
             return result
+
+def largest_factor_answer(n):
+    return n - 1
 
 
 def if_function(condition, true_result, false_result):
